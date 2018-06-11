@@ -7,12 +7,40 @@ import Contact from "./pages/Contact.jsx";
 import Login from "./pages/Login.jsx";
 import RegForm from "./pages/RegForm.jsx";
 import Launcher from "./pages/Launcher.jsx"
+import fire from "./config/Fire.jsx";
+import Dashboard from "./userboard/Dashboard.jsx";
 
 class App extends Component {
+ 
+  constructor(props){
+    super(props);
+    this.state ={
+      user: {},
+    }
+  }
+
+  componentDidMount(){
+    this.authlistener();
+  }
+
+  authlistener(){
+    fire.auth().onAuthStateChanged((user) => {
+      //console.log(user);
+      if (user) {
+        this.setState({user});
+        //localStorage.setItem('user',user.uid);
+      }else{
+        this.setState({user:null});
+        //localStorage.removeItem('user');
+      }
+    
+    });
+  }
   render() {
     return (
       <Router>
         <div>
+          {this.state.user ? (<Dashboard/>) : (<Home/>)}
           <Route exact path="/" component={Home} />
           <Route path="/About" component={About} />
           <Route path="/Contact" component={Contact} />
