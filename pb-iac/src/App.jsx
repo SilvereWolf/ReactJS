@@ -20,10 +20,10 @@ class App extends Component {
   }
 
   componentDidMount(){
-    this.authlistener();
+    this.authListener();
   }
 
-  authlistener(){
+  authListener(){
     fire.auth().onAuthStateChanged((user) => {
       //console.log(user);
       if (user) {
@@ -39,14 +39,14 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div>
+        <div className="App">
           {this.state.user ? (<Dashboard/>) : (<Home/>)}
-          <Route exact path="/" component={Home} />
           <Route path="/About" component={About} />
           <Route path="/Contact" component={Contact} />
           <Route path="/RegForm" component={RegForm}/>
           <Route path="/Login" component={Login}/>
           <Route path="/Launcher" component={Launcher}/>
+          
         </div>
       </Router>
     );

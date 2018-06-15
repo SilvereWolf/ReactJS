@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import Navbar from '../components/ClientNavbar.jsx';
 import Footer from '../components/Footer.jsx';
-import fire from "./config/Fire.jsx"
+import fire from "../config/Fire.jsx"
 
 
 
@@ -18,14 +18,14 @@ export default class Login extends React.Component {
     }
     login(e) {
         e.preventDefault();
-        fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password). then((u)=>{
+        fire.auth().signInWithEmailAndPassword(this.state.email,this.state.password).then((u)=>{
         }).catch((error)=>{
             console.log(error)
         });
     }
 
     handleChange(e){
-        this.setState({ [e.target.name]: e.target.value})
+        this.setState({ [e.target.name]: e.target.value});
     
 }
   render() {
