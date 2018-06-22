@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import Footer from '../components/Footer.jsx';
 import Navbar from '../components/ClientNavbar.jsx';
-import Jumbotron from '../components/Jumbotron.jsx';
+import Carousel from '../components/Carousel.jsx';
 
 class Home extends Component {
   render() {
     return (
       <div>
         <Navbar />
-        <Jumbotron title="Welcome" subtitle="Put something witty here!" />
+        <Carousel />
         <div className="container">
           <h2>Welcome</h2>
           <p>

@@ -30,7 +30,7 @@ class ClientNavbar extends Component {
   render() {
     return (     <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">Panic Button</NavbarBrand>
+        <NavbarBrand href="/Home">Panic Button</NavbarBrand>
         <NavbarToggler onClick={this.toggle} />
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="ml-auto" navbar>
@@ -47,9 +47,6 @@ class ClientNavbar extends Component {
               <DropdownMenu right>
                 <DropdownItem>
                 <NavLink href="/Login">Login</NavLink>
-                </DropdownItem>
-                <DropdownItem>
-                <NavLink href="/RegForm">Register</NavLink>
                 </DropdownItem>
                 <DropdownItem divider />
               </DropdownMenu>

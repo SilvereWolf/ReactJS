@@ -5,45 +5,46 @@ import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Contact from "./pages/Contact.jsx";
 import Login from "./pages/Login.jsx";
-import RegForm from "./pages/RegForm.jsx";
 import Launcher from "./pages/Launcher.jsx"
-import fire from "./config/Fire.jsx";
-import Dashboard from "./userboard/Dashboard.jsx";
+import firebase from "firebase";
+import Dashboard from "./clientside/Dashboard.jsx";
+
 
 class App extends Component {
- 
-  constructor(props){
-    super(props);
-    this.state ={
-      user: {},
+  state = {isSignedIn: false}
+  uiConfig = {
+    signInFlow: "popup",
+    signInOptions: [
+      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+      firebase.auth.PhoneAuthProvider.PROVIDER_ID,
+      firebase.auth.EmailAuthProvider.PROVIDER_ID
+    ],
+    callbacks: {
+      signInSuccess: () => false
     }
   }
 
-  componentDidMount(){
-    this.authListener();
+  componentDidMount = () => {
+    
+    firebase.auth().onAuthStateChanged(user => {
+      this.setState({ isSignedIn: !!user })
+      console.log("user", user)
+    })
   }
 
-  authListener(){
-    fire.auth().onAuthStateChanged((user) => {
-      //console.log(user);
-      if (user) {
-        this.setState({user});
-        //localStorage.setItem('user',user.uid);
-      }else{
-        this.setState({user:null});
-        //localStorage.removeItem('user');
-      }
-    
-    });
-  }
   render() {
     return (
       <Router>
         <div className="App">
-          {this.state.user ? (<Dashboard/>) : (<Home/>)}
+        {this.isSignedIn ?(
+          <Route path="/Dashboard" component={Dashboard}/>
+        )
+        :(
+          <Route path="/Home" component={Home}/>
+        )
+        }
           <Route path="/About" component={About} />
           <Route path="/Contact" component={Contact} />
-          <Route path="/RegForm" component={RegForm}/>
           <Route path="/Login" component={Login}/>
           <Route path="/Launcher" component={Launcher}/>
           
