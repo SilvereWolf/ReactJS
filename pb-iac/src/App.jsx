@@ -36,7 +36,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-        {this.isSignedIn ?(
+        {this.state.isSignedIn ?(
           <Route path="/Dashboard" component={Dashboard}/>
         )
         :(

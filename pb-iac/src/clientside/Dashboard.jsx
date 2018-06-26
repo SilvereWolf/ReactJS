@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import firebase from "firebase"
-import Navbar from '../components/ClientNavbar.jsx'; 
 import Footer from '../components/Footer';
 
 
@@ -32,7 +31,6 @@ class Dashboard extends Component {
     render() {
         return (
             <div>
-            <Navbar/>
             <span>
             <div>Signed In!</div>
             <button onClick={() => firebase.auth().signOut()}>Sign out!</button>
