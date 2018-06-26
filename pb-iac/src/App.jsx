@@ -20,7 +20,11 @@ class App extends Component {
       firebase.auth.EmailAuthProvider.PROVIDER_ID
     ],
     callbacks: {
-      signInSuccess: () => false
+      signInSuccessWithAuthResult: (authResult, redirectUrl) => {
+        console.log('signInSuccessWithAuthResult', authResult, redirectUrl);
+        this.props.history.push('/Dashboard');
+        return false;
+      }
     }
   }
 
