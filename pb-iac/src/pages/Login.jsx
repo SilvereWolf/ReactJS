@@ -11,6 +11,7 @@ firebase.initializeApp({
 
 
 export default class Login extends React.Component {
+
   state = {isSignedIn: false}
   uiConfig = {
     signInFlow: "popup",

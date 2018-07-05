@@ -1,0 +1,4 @@
+#Tue Jul 03 16:53:57 GFT 2018
+base.0=C\:\\Users\\gino_\\ReactJS\\panicbutton\\android\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
+renamed.0=classes.dex
+file.0=C\:\\Users\\gino_\\ReactJS\\panicbutton\\android\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex

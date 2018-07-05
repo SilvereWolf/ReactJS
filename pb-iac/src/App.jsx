@@ -13,7 +13,7 @@ import Dashboard from "./clientside/Dashboard.jsx";
 class App extends Component {
   state = {isSignedIn: false}
   uiConfig = {
-    signInFlow: "popup",
+    signInFlow: "redirect",
     signInOptions: [
       firebase.auth.GoogleAuthProvider.PROVIDER_ID,
       firebase.auth.PhoneAuthProvider.PROVIDER_ID,

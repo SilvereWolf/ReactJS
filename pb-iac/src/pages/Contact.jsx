@@ -8,7 +8,7 @@ class About extends Component {
     return (
       <div>
         <Navbar />
-        <Jumbotron title="Contact" subtitle="Please contact me at Brice@CodeLife.io"/>
+        <Jumbotron title="Contact" subtitle="Maakt contact met ons op nu!"/>
         <div className="container">
           <h2>Contact</h2>
           <p>
