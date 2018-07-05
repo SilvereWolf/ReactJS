@@ -23,7 +23,9 @@ const items = [
     altText: 'Slide 3',
     caption: 'Slide 3'
   }
+  
 ];
+
 
 class Example extends Component {
   constructor(props) {
@@ -36,6 +38,8 @@ class Example extends Component {
     this.onExited = this.onExited.bind(this);
   }
 
+
+  
   onExiting() {
     this.animating = true;
   }
