@@ -14,6 +14,7 @@
     "firebase": "^5.0.4",
     "firebase-admin": "^5.12.1",
     "jquery": "^3.3.1",
+    "mapbox-gl": "^0.46.0",
     "popper.js": "^1.14.3",
     "react": "^16.4.1",
     "react-bootstrap": "^0.32.1",
@@ -22,7 +23,8 @@
     "react-firebaseui": "^3.0.4",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.4",
-    "reactstrap": "^6.0.1"
+    "reactstrap": "^6.0.1",
+    "semantic-ui": "^2.3.3"
   },
   "scripts": {
     "start": "react-scripts start",
