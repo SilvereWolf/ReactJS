@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import Footer from '../components/Footer.jsx';
 import Navbar from '../components/ClientNavbar.jsx';
-import Carousel from '../components/Carousel.jsx';
+
 
 class Home extends Component {
   render() {
     return (
       <div>
         <Navbar />
-        <Carousel />
+        
         <div className="container">
           <h2>Welcome</h2>
           <p>
