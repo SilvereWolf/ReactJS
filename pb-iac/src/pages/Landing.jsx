@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import './Landing.css';
+import icons from 'glyphicons'
 
 class landing extends Component {
     render () {
