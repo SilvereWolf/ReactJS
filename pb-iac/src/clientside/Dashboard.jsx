@@ -38,7 +38,7 @@ class Dashboard extends Component {
         })
       }
       componentWillUnmount() {
-        this.props.history.push('/Home');
+        this.props.history.push('/Landing');
       }
     
     render() {
