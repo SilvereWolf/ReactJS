@@ -100,21 +100,21 @@ class landing extends Component {
               <div className="row">
                 <div className="col-lg-4">
                   <div className="testimonial-item mx-auto mb-5 mb-lg-0">
-                    <img className="img-fluid rounded-circle mb-3" src="./Images/testimonials-1.jpg" alt />
+                    <img className="img-fluid rounded-circle mb-3" src="./Images/testimonials-1.jpg" alt="" />
                     <h5>Margaret E.</h5>
                     <p className="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
                   </div>
                 </div>
                 <div className="col-lg-4">
                   <div className="testimonial-item mx-auto mb-5 mb-lg-0">
-                    <img className="img-fluid rounded-circle mb-3" src="img/testimonials-2.jpg" alt />
+                    <img className="img-fluid rounded-circle mb-3" src="img/testimonials-2.jpg" alt="" />
                     <h5>Fred S.</h5>
                     <p className="font-weight-light mb-0">"Bootstrap is amazing. I've been using it to create lots of super nice landing pages."</p>
                   </div>
                 </div>
                 <div className="col-lg-4">
                   <div className="testimonial-item mx-auto mb-5 mb-lg-0">
-                    <img className="img-fluid rounded-circle mb-3" src="img/testimonials-3.jpg" alt />
+                    <img className="img-fluid rounded-circle mb-3" src="img/testimonials-3.jpg" alt="" />
                     <h5>Sarah	W.</h5>
                     <p className="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p>
                   </div>
@@ -169,12 +169,12 @@ class landing extends Component {
                       </a>
                     </li>
                     <li className="list-inline-item mr-3">
-                      <a href="#">
+                      <a href="">
                         <i className="fa fa-twitter fa-2x fa-fw" />
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#">
+                      <a href="">
                         <i className="fa fa-instagram fa-2x fa-fw" />
                       </a>
                     </li>
