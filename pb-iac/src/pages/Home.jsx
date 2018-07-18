@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Footer from '../components/Footer.jsx';
 import Navbar from '../components/ClientNavbar.jsx';
+import Table from "../components/Table.jsx"
 
 
 class Home extends Component {
@@ -17,6 +18,7 @@ class Home extends Component {
           <p>
           page  
           </p>
+          <Table/>
         </div>
         <Footer fixed />
       </div>
