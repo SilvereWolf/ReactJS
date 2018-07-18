@@ -5,8 +5,8 @@ class MKMLogIn extends Component {
         return (
            <div>
            <div class="row">
-           
-  <div className="container" style={{display: 'flex', justifyContent: 'center'}}>
+               
+  <div className="container">
     <div id="login-box">
       <div className="logo">
         <img src="http://lorempixel.com/output/people-q-c-100-100-1.jpg" className="img img-responsive img-circle center-block" />
@@ -20,9 +20,8 @@ class MKMLogIn extends Component {
     </div>{/* /#login-box */}
   </div>{/* /.container */}
   <div id="particles-js" />
-  </div>
 </div>
-
+</div>
         )
     }
 }
