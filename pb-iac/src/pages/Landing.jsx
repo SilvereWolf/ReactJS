@@ -8,8 +8,9 @@ class landing extends Component {
   
     render () {
         return (
+    
             <div>
-          {/* Navigation */}
+          {/* Navigation */}      {/* Head */}
           <nav className="navbar navbar-light bg-light static-top">
             <div className="container">
               <a className="navbar-brand" href="/Landing">PanicButton</a>
