@@ -76,14 +76,3 @@ body, html {
   	top: 0px;
   	z-index:1;
 }
-.col-centered{
-    float: none;
-    margin: 0 auto;
-}
-.container {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
