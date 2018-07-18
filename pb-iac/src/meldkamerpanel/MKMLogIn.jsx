@@ -9,7 +9,7 @@ class MKMLogIn extends Component {
   <div className="container">
     <div id="login-box">
       <div className="logo">
-        <img src="http://lorempixel.com/output/people-q-c-100-100-1.jpg" className="img img-responsive img-circle center-block" />
+        <img src="http://lorempixel.com/output/people-q-c-100-100-1.jpg" className="img img-responsive img-circle center-block" alt="" />
         <h1 className="logo-caption"><span className="tweak">L</span>ogin</h1>
       </div>{/* /.logo */}
       <div className="controls">
