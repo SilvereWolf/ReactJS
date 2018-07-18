@@ -13,6 +13,7 @@
     "es2015": "0.0.0",
     "firebase": "^5.0.4",
     "firebase-admin": "^5.12.1",
+    "glyphicons": "^0.2.0",
     "jquery": "^3.3.1",
     "mapbox-gl": "^0.46.0",
     "popper.js": "^1.14.3",
