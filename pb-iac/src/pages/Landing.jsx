@@ -1,14 +1,12 @@
 import React, { Component } from 'react'
 import './Landing.css';
-
-
-var icons = require('glyphicons')
+import icons from 'glyphicons';
 
 class landing extends Component {
   
     render () {
+      console.info('I' + icons.heart + ' Glyphicons!')
         return (
-    
             <div>
           {/* Navigation */}    
           <nav className="navbar navbar-light bg-light static-top">
