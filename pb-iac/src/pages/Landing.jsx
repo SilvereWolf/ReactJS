@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import './Landing.css';
-import icons from 'glyphicons';
 
 
+var icons = require('glyphicons')
 
 class landing extends Component {
   
@@ -10,7 +10,7 @@ class landing extends Component {
         return (
     
             <div>
-          {/* Navigation */}      {/* Head */}
+          {/* Navigation */}    
           <nav className="navbar navbar-light bg-light static-top">
             <div className="container">
               <a className="navbar-brand" href="/Landing">PanicButton</a>
