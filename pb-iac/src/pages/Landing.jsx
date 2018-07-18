@@ -7,8 +7,8 @@ class landing extends Component {
           {/* Navigation */}
           <nav className="navbar navbar-light bg-light static-top">
             <div className="container">
-              <a className="navbar-brand" href="#">PanicButton</a>
-              <a className="btn btn-primary" href="#">Sign In</a>
+              <a className="navbar-brand" href="/Landing">PanicButton</a>
+              <a className="btn btn-primary" href="/Login">Sign In</a>
             </div>
           </nav>
           {/* Masthead */}
