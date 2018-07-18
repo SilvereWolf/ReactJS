@@ -8,6 +8,7 @@ import Login from "./pages/Login.jsx";
 import Launcher from "./pages/Launcher.jsx"
 import firebase from "firebase";
 import Dashboard from "./clientside/Dashboard.jsx";
+import Landing from "./pages/Landing.jsx";
 
 
 class App extends Component {
@@ -51,6 +52,7 @@ class App extends Component {
           <Route path="/Contact" component={Contact} />
           <Route path="/Login" component={Login}/>
           <Route path="/Launcher" component={Launcher}/>
+          <Route path="/Landing" component={Landing}/>
           
         </div>
       </Router>

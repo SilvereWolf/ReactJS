@@ -32,6 +32,7 @@ export default class Example extends React.Component {
             <td>the Bird</td>
             <td>@twitter</td>
           </tr>
+          
         </tbody>
       </Table>
     );
