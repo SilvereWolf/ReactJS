@@ -18,12 +18,15 @@ const FIREBASE_DATABASE = firebase.database();
 
 const signoutButton = document.getElementById('signout');
 const displayName = document.getElementById('display-name');
+const createLevel = document.getElementById('level1');
+// const displayName = document.getElementById('display-name');
+// const displayName = document.getElementById('display-name');
 
 // EVENT LISTENERS
 FIREBASE_AUTH.onAuthStateChanged(handleAuthStateChanged);
 
 signoutButton.addEventListener("click", signOut);
-
+createLevel.addEventListener("click", addLevel1);
 
 // FUNCTIONS
 function signOut() {
@@ -34,6 +37,7 @@ function handleAuthStateChanged(user) {
     if (user) {
         // User is signed in
         displayName.innerHTML = user.displayName;
+        document.getElementById("uid").innerHTML = user.uid;
         writeUserData(user);
     }else{
         console.log("user signed out");
@@ -52,4 +56,19 @@ function writeUserData(user) {
       geoLocation: panicUser.geoLocation,
       IDimageUrl: panicUser.IDimageUrl
     });
+    
+}
+
+function addLevel1() {
+    var uid = document.getElementById("uid").innerHTML;
+    var number = prompt("Vul uw telefoon nummer in zodat een medewerker contact met u kunt maken", "");
+
+    if (number != null || number != "") {
+        FIREBASE_DATABASE.ref('reports/' + uid).set({
+            number: number,
+            level: '1',
+            imgUrl: 'null'
+        });
+        alert("U zal door een meldkamer medewerker worden opgebeld en zo verder verhelpen worden.");
+    } 
 }

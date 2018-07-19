@@ -38,41 +38,47 @@
                     </a>
                 </div>
                 <div class="button-wrapper">
-                    <button class="stype_top" id="signout">Sign out</button>
-                </div>
-
-                <div class="button-wrapper">
-                    <button id="level1">Panic Level 1</button>
-                </div>
-                <div class="button-wrapper">
-                    <button id="level2">Panic Level 2</button>
-                </div>
-                <div class="button-wrapper">
-                    <button id="level3">Get Rescued</button>
+                    <button id="signout">Sign out</button>
                 </div>
             </nav>
         </div>
     </header>
 
     <div class="container">
-        <div class="wrapper">
-            <h5>Welcome back, <span id="display-name"></span></h5>
-            <div class="uid" style="display: none"></div>
-        </div>
+        <div class="wrapper">        
+            <div class="main-content">
+                <aside>
+                    <ul>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                    </ul>
+                </aside>
+                <div class="content">
 
-        <div class="main-content">
-            <aside>
-                <ul>
-                    <li><a href="profile.html">Profile</a></li>
-                </ul>
-            </aside>
-            <div class="content">
-                
+                    <div class="profile-image">
+                        <img id="profile-img" src="img/user.png" alt="">
+                    </div>
+                    <div class="input-group">
+                        <h4>Info</h4>
+                        Display name: <input type="text" name="display-name" id="display-name" readonly>
+                        Email: <input type="text" name="email" id="email" readonly>
+                    </div>
+                    <div class="input-group">
+                        <h4>Geolocation</h4>
+                        Latitude: <input type="number" name="latitude" id="latitude" readonly>
+                        Longitude: <input type="number" name="longitude" id="longitude" readonly>
+                    </div>
+                    <div class="id-image">
+                        <img src="img/user-id.png" id="id-img" alt="ID image">
+                        <input type="file" id="id-input" hidden>
+                    </div>
+                    <button id="edit">Edit</button>
+                    <button id="edit" hidden>Save</button>
+                </div>
             </div>
         </div>
     </div>
 
 
-  <script src="/js/dashboard.js"></script>
+  <script src="/js/profile.js"></script>
 </body>
 </html>
