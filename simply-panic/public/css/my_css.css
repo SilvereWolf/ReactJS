@@ -1,0 +1,179 @@
+/*width*/
+.w_100_procent{
+	width: 100%
+}
+
+
+
+
+
+
+
+
+/*margin*/
+.margin_top_em_10{
+	margin-top: 10em;
+}
+.margin_top_em_9{
+	margin-top: 9em;
+}
+.margin_top_em_8{
+	margin-top: 8em;
+}
+.margin_top_em_7{
+	margin-top: 7em;
+}
+.margin_top_em_6{
+	margin-top: 6em;
+}
+.margin_top_em_5{
+	margin-top: 5em;
+}
+.margin_top_em_4{
+	margin-top: 4em;
+}
+.margin_top_em_3{
+	margin-top: 3em;
+}
+.margin_0{
+	    margin-bottom: 0px;
+}
+.margin_bottom_em_10{
+	margin-bottom: 10em;
+}
+.margin_bottom_em_9{
+	margin-bottom: 9em;
+}
+.margin_bottom_em_8{
+	margin-bottom: 8em;
+}
+.margin_bottom_em_7{
+	margin-bottom: 7em;
+}
+.margin_bottom_em_6{
+	margin-bottom: 6em;
+}
+.margin_bottom_em_5{
+	margin-bottom: 5em;
+}
+.margin_bottom_em_4{
+	margin-bottom: 4em;
+}
+.margin_bottom_em_3{
+	margin-bottom: 3em;
+}
+.margin_0{
+	    margin-bottom: 0px;
+}
+
+
+
+
+
+
+
+/*padding*/
+.padding_unset{
+	padding: unset;
+}
+
+
+
+
+
+
+.hr_style{
+    border-top: 5px solid rgba(0,197,205, 1.0);	
+}
+
+
+
+
+
+
+
+
+/*kleur*/
+.text_kleur_turquoise{
+	color: #00c5cd;
+}
+
+
+
+
+
+
+.flowt_right{
+	float: right;
+}
+
+.table_style_bottom_color{
+/*	border: none !important;*/
+    border-bottom: 1px solid transparent !important;
+    border-left: 1px solid transparent !important;
+}
+.table_style_top_color{
+    border-top: 1px solid transparent !important;
+    border-left: 1px solid transparent !important;
+    border-right: 1px solid transparent !important;
+}
+
+.company_name{
+	    font-size: 1.4rem;
+}
+.sub_title{
+	font-size: 1.4em !important;
+}
+
+.stype_knop{
+	background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+	border-color: transparent;
+	font-size: 30px;
+    margin-top: 1.5em;
+}
+
+.stype_knop:hover {
+	background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+	border-color: transparent;
+	font-size: 30px;
+}
+.stype_knop:focus {
+	background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+}
+.stype_knop:not(:disabled):not(.disabled).active, .stype_knop:not(:disabled):not(.disabled):active, .show>.stype_knop.dropdown-toggle {
+	background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+	border-color: transparent;
+	font-size: 30px;
+}
+.stype_top{
+	background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+	border-color: transparent;
+}
+.stype_top:hover {
+	background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+	border-color: transparent;
+}
+.stype_top:focus {
+	background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+}
+.stype_top:not(:disabled):not(.disabled).active, .stype_top:not(:disabled):not(.disabled):active, .show>.stype_top.dropdown-toggle {
+	background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+	border-color: transparent;
+}
+
+.menu{
+	background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+}
+/*.bg_row1{
+	background-color: red;
+}*/
+
+.schaduw{
+	-webkit-box-shadow: 18px 17px 67px -20px rgba(153,145,153,0.86);
+-moz-box-shadow: 18px 17px 67px -20px rgba(153,145,153,0.86);
+box-shadow: 18px 17px 67px -20px rgba(153,145,153,0.86);
+}
+.overlay{
+    overflow: hidden;
+    color: #FFFFFF
+}

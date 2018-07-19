@@ -4,6 +4,13 @@
   <meta charset="utf-8">
   <title>Simply Notify</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/my_css.css">
   
   <!-- Firebase SDK -->
   <script src="/__/firebase/5.2.0/firebase-app.js"></script>
@@ -42,8 +49,11 @@
                     <li><a href="#">Be Aware</a></li>
                     <li><a href="#">Get Rescued</a></li>
                 </ul>
-                <div class="button-wrapper">
-                    <button id="login">Log In</button>
+
+
+                <div class="button-wrapper ">
+                    <button  class="stype_top" id="login" style="border-radius: 45px;">Log In</button>
+
                 </div>
             </nav>
         </div>
@@ -55,27 +65,56 @@
         <div id="firebaseui-auth-container"></div>
         <div id="loader">Loading...</div>
     </div>
-
-    <div class="wrapper">
-    <main>
-      
-        
-
-      <form id="send-notification-form" hidden>
-        <label class="sr-only" for="notification-message">Notification Message</label>
-        <div>
-          <textarea id="notification-message" maxlength="40" placeholder="What would you like to say?"></textarea>
-          <button type="submit" id="send-notification" aria-label="Send">
-            <img src="/img/send.png" alt="">
-          </button>
+    <div class="container margin_top_em_4">
+      <div class="row" style="height: 450px; margin-bottom: 4em;">
+        <div class="col-md-6">
+          <img src="img/panic.png" class="overlay" style="height: 100%; border-radius: 10px; width: 100%; position: absolute; top: 0;left: 0;">
+          
         </div>
-      </form>
-    </main>
+        <div class="col-md-6 margin_top_em_3">
+          <h3 style="font-size: 4rem; letter-spacing: -.06em;     line-height: 57px;">End Users</h3>
+          <p>Deze Applicatie is bestemd voor een ieder dat zich thuis veiliger wilt voelen en is toegankelijk op mobiel, smart Tv’s ,Laptops etc.</p>
 
-    <footer>
-      <small><a href="https://github.com/ireade/simply-notify">View Source</a></small>
-    </footer>
-  </div>
+          <h3 style="font-size: 4rem; letter-spacing: -.06em;     line-height: 57px;">ABOUT</h3>
+          <p>Panic Button is een applicatie dat de gebruiker kunt gebruiken
+              in noodgevallen of wanneer gevaar dreigt zo dat die zich
+              veiliger kunt voelen</p>
+
+          <button type="button" class="btn btn-primary btn-lg stype_knop" style="border-radius: 40px">Hier aanmelden</button><br><br>
+        </div>
+      </div>
+      <div class="row bg_row1" style="height: 450px; margin-bottom: 4em;">
+        <div class="col-md-6" style="margin-top: 15%;">
+          <h3 style="font-size: 4rem; letter-spacing: -.06em; line-height: 57px;">Panic level 1</h3>
+          <p>Hier zult u door een meldkamer medewerker worden opgebeld en zal die u zo verder verhelpen.</p>
+        </div>
+        <div class="col-md-6">
+          <img class="schaduw" src="img/red-background-61.jpg" style="height: 100%; border-radius: 10px; width: 100%; position: absolute; top: 0;">
+          <img src="img/level1.jpg" style="margin-top: 2em; border-radius: 10px; width: 100%;transform: rotate(10deg);">
+        </div>
+      </div>
+
+
+        <div class="row" style="height: 450px; margin-bottom: 4em;">
+        <div class="col-md-6">
+          <img src="img/level2.jpg" style="height: 100%; border-radius: 10px; width: 100%;">
+        </div>
+        <div class="col-md-6 margin_top_em_3" style="margin-top: 15%;">
+          <h3 style="font-size: 4rem; letter-spacing: -.06em; line-height: 57px;">Panic Level 2</h3>
+          <p>Hier bestaat de mogelijkheid om een photo mee te sturen van een misdaad dat gepleegd wordt of plaats kan vinden hier wordt u ook op gebeld voor meerdere details.</p>
+        </div>
+      </div>
+      <div class="row bg_row1" style="height: 450px; margin-bottom: 4em;">
+        <div class="col-md-6" style="margin-top: 15%;" style="margin-top: 15%;">
+          <h3 style="font-size: 4rem; letter-spacing: -.06em; line-height: 57px;">Panic level 3</h3>
+          <p>Hier gaat het om extreme gevallen waar de u in gevaar loopt als u gebeld zou worden. Hier wordt er een uitroep team van de dichtbijzijnste buurtwacht ingeschakeld  en die de politie indien nodig</p>
+        </div>
+        <div class="col-md-6">
+          <img src="img/level3.png" style="height: 100%; border-radius: 10px; width: 100%;transform: rotate(10deg);">
+        </div>
+      </div>
+
+    </div>
 
   <script src="/js/main.js"></script>
 </body>

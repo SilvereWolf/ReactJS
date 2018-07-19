@@ -1,0 +1,50 @@
+[debug] [2018-07-19T13:34:15.996Z] ----------------------------------------------------------------------
+[debug] [2018-07-19T13:34:15.999Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\gino_\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-07-19T13:34:15.999Z] CLI Version:   3.19.3
+[debug] [2018-07-19T13:34:15.999Z] Platform:      win32
+[debug] [2018-07-19T13:34:15.999Z] Node Version:  v8.10.0
+[debug] [2018-07-19T13:34:16.000Z] Time:          Thu Jul 19 2018 10:34:15 GMT-0300 (SA Eastern Standard Time)
+[debug] [2018-07-19T13:34:16.000Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-07-19T13:34:16.012Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-07-19T13:34:16.013Z] > authorizing via signed-in user
+[debug] [2018-07-19T13:34:16.016Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-07-19T13:34:16.016Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/jvWyZoYcXYcTlNq1Tmp7ZaJQTC_91BPwUwsvaVEN-3k',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Thu Jul 19 2018 10:34:16 GMT-0300 (SA Eastern Standard Time)
+[debug] [2018-07-19T13:34:17.591Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-19T13:34:17.597Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/panicbutton-1525105633835  
+  
+ Thu Jul 19 2018 10:34:17 GMT-0300 (SA Eastern Standard Time)
+[debug] [2018-07-19T13:34:19.004Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-19T13:34:19.005Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/panicbutton-1525105633835/tokens  
+  
+ Thu Jul 19 2018 10:34:19 GMT-0300 (SA Eastern Standard Time)
+[debug] [2018-07-19T13:34:20.236Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-19T13:34:20.236Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/panicbutton-1525105633835  
+  
+ Thu Jul 19 2018 10:34:20 GMT-0300 (SA Eastern Standard Time)
+[debug] [2018-07-19T13:34:22.398Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\gino_\ReactJS\simply-panic'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-07-19T13:34:23.742Z] Fetching environment
+[debug] [2018-07-19T13:34:23.745Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/152743131771:getServerAppConfig  
+  
+ Thu Jul 19 2018 10:34:23 GMT-0300 (SA Eastern Standard Time)
+[debug] [2018-07-19T13:34:23.746Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/152743131771/clients/_:getWebAppConfig  
+  
+ Thu Jul 19 2018 10:34:23 GMT-0300 (SA Eastern Standard Time)
+[debug] [2018-07-19T13:34:24.802Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-19T13:34:24.824Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-19T13:34:24.824Z] Starting @google-cloud/functions-emulator
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[debug] [2018-07-19T13:34:27.367Z] Parsing function triggers
+[info] i  functions: No HTTPS functions found. Use firebase functions:shell if you would like to emulate other types of functions.
