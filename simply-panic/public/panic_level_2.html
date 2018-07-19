@@ -15,7 +15,7 @@
     <script src="/__/firebase/5.2.0/firebase-functions.js"></script>
     
     <!-- Comment out (or don't include) services that you don't want to use -->
-    <!-- <script src="/__/firebase/5.2.0/firebase-storage.js"></script> -->
+    <script src="/__/firebase/5.2.0/firebase-storage.js"></script>
   
     <script src="/__/firebase/init.js"></script>
 
@@ -53,16 +53,25 @@
                     </ul>
                 </aside>
                 <div class="content">
-                    <div class="input-group">
-                        <h4>Foto van misdaad toevoegen:</h4>
+
+                    <div class="profile-image">
+                        <img id="profile-img" src="img/user.png" alt="">
                     </div>
-                    <div class="id-image">
-                        <img src="img/user-id.png" id="id-img" alt="ID image">
-                        <input type="file" id="id-input" hidden>
+                    <div class="input-group">
+                        <h4>Foto van misdaad:</h4>
+                        Telefoon: <input type="text" id="phone" placeholder="Telefoon nummer hier...">
+                    </div>
+                    <div class="input-group">
+                        <h4>Foto van misdaad:</h4>
                     </div>
                     <br>
-                    <button id="edit">Versturen</button>
-                    <button id="edit" hidden>Save</button>
+                    <div class="id-image">
+                        <img src="img/user-id.png" id="id-img" alt="ID image">
+                        <input type="file" id="id-input">
+                    </div>
+                    <br>
+                    <button id="edit">Edit</button>
+                    <button id="save" hidden>Save <span id="save-loader" hidden> | saving ...</span></button>
                 </div>
             </div>
         </div>
