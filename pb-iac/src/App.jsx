@@ -40,6 +40,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
+          <h1>Title</h1>
         {this.state.isSignedIn ?(
           <Route path="/Dashboard" component={Dashboard}/>
         )
@@ -51,8 +52,13 @@ class App extends Component {
           <Route path="/Contact" component={Contact} />
           <Route path="/Login" component={Login}/>
           <Route path="/Launcher" component={Launcher}/>
+<<<<<<< HEAD
+          <Route path="/Landing" component={Landing}/>
+          <Route path="/Dashboard" component={Dashboard}/>
+=======
           <Route path="/MKMLogIn" component={MKMLogIn}/>
           
+>>>>>>> 979d7a152b4629ab1a067c13796038c99467d791
           
         </div>
       </Router>
