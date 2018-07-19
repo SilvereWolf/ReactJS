@@ -1,0 +1,54 @@
+[debug] [2018-07-19T10:35:23.002Z] ----------------------------------------------------------------------
+[debug] [2018-07-19T10:35:23.018Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Jonathan\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-07-19T10:35:23.018Z] CLI Version:   3.19.3
+[debug] [2018-07-19T10:35:23.018Z] Platform:      win32
+[debug] [2018-07-19T10:35:23.018Z] Node Version:  v6.11.0
+[debug] [2018-07-19T10:35:23.018Z] Time:          Thu Jul 19 2018 07:35:23 GMT-0300 (Argentina Standard Time)
+[debug] [2018-07-19T10:35:23.018Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-07-19T10:35:23.064Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-07-19T10:35:23.067Z] > authorizing via signed-in user
+[debug] [2018-07-19T10:35:23.075Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-07-19T10:35:23.077Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/B6I4RbC2MTMQ3aZG9ch6B5X2sziZQhR_hrOBq2Fn9cvPnfzxwjPCs9wY3NWYydXf',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Thu Jul 19 2018 07:35:23 GMT-0300 (Argentina Standard Time)
+[debug] [2018-07-19T10:35:23.707Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-19T10:35:24.787Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/panicbutton-1525105633835  
+  
+ Thu Jul 19 2018 07:35:24 GMT-0300 (Argentina Standard Time)
+[debug] [2018-07-19T10:35:25.711Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-19T10:35:25.713Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/panicbutton-1525105633835/tokens  
+  
+ Thu Jul 19 2018 07:35:25 GMT-0300 (Argentina Standard Time)
+[debug] [2018-07-19T10:35:26.425Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-19T10:35:26.440Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/panicbutton-1525105633835  
+  
+ Thu Jul 19 2018 07:35:26 GMT-0300 (Argentina Standard Time)
+[debug] [2018-07-19T10:35:27.090Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\wamp\www\collabs\ReactJS\simply-panic'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-07-19T10:35:33.787Z] Fetching environment
+[debug] [2018-07-19T10:35:33.796Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/152743131771:getServerAppConfig  
+  
+ Thu Jul 19 2018 07:35:33 GMT-0300 (Argentina Standard Time)
+[debug] [2018-07-19T10:35:33.801Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/152743131771/clients/_:getWebAppConfig  
+  
+ Thu Jul 19 2018 07:35:33 GMT-0300 (Argentina Standard Time)
+[debug] [2018-07-19T10:35:34.700Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-19T10:35:34.771Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-19T10:35:34.772Z] Starting @google-cloud/functions-emulator
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[warn] !  functions: Error from emulator. Error: Emulator crashed! Check the log file...
+[debug] [2018-07-19T10:35:36.227Z] Error: Emulator crashed! Check the log file...
+    at ChildProcess.child.on (C:\Users\Jonathan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\@google-cloud\functions-emulator\src\cli\controller.js:650:24)
+    at emitTwo (events.js:106:13)
+    at ChildProcess.emit (events.js:191:7)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:215:12)

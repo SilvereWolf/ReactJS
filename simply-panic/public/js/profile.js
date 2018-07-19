@@ -14,11 +14,15 @@ const emailInput = document.getElementById('email');
 const latitudeInput = document.getElementById('latitude');
 const longitudeInput = document.getElementById('longitude');
 const IDImage = document.getElementById('id-img');
+const IDImageInput = document.getElementById('id-input');
+const editButton = document.getElementById('edit');
+const saveButton = document.getElementById('save');
 
 // EVENT LISTENERS
 FIREBASE_AUTH.onAuthStateChanged(handleAuthStateChanged);
 
 signoutButton.addEventListener("click", signOut);
+editButton.addEventListener("click", prepareEdit);
 
 // FUNCTIONS
 function signOut() {
@@ -70,4 +74,13 @@ function writeUserData(user) {
       geoLocation: panicUser.geoLocation,
       IDimageUrl: panicUser.IDimageUrl
     });
+}
+
+function prepareEdit(){
+    displayNameInput.removeAttribute("readonly");
+    longitudeInput.removeAttribute("readonly");
+    latitudeInput.removeAttribute("readonly");
+    IDImageInput.removeAttribute("hidden");
+    editButton.setAttribute("hidden", "true");
+    saveButton.removeAttribute("hidden");
 }
