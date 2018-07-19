@@ -19,7 +19,7 @@ const FIREBASE_DATABASE = firebase.database();
 const signoutButton = document.getElementById('signout');
 const displayName = document.getElementById('display-name');
 const createLevel = document.getElementById('level1');
-// const displayName = document.getElementById('display-name');
+const level2 = document.getElementById('level2');
 // const displayName = document.getElementById('display-name');
 
 // EVENT LISTENERS
@@ -27,6 +27,9 @@ FIREBASE_AUTH.onAuthStateChanged(handleAuthStateChanged);
 
 signoutButton.addEventListener("click", signOut);
 createLevel.addEventListener("click", addLevel1);
+level2.addEventListener("click", function() {
+    window.location = 'panic_level_2.html';
+});
 
 // FUNCTIONS
 function signOut() {
