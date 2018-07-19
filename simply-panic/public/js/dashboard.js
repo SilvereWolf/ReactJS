@@ -86,7 +86,7 @@ function addLevel3() {
         FIREBASE_DATABASE.ref('reports/' + uid).set({
             number: number,
             address: address,
-            level: '1',
+            level: '3',
             imgUrl: 'null'
         });
         alert("Er zal een uitroep team van de dichtbijzijnste buurtwacht ingeschakeld worden en indien nodig ook de politie.");
