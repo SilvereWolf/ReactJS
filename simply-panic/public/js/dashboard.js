@@ -18,18 +18,19 @@ const FIREBASE_DATABASE = firebase.database();
 
 const signoutButton = document.getElementById('signout');
 const displayName = document.getElementById('display-name');
-const createLevel = document.getElementById('level1');
+const level1 = document.getElementById('level1');
 const level2 = document.getElementById('level2');
-// const displayName = document.getElementById('display-name');
+const level3 = document.getElementById('level3');
 
 // EVENT LISTENERS
 FIREBASE_AUTH.onAuthStateChanged(handleAuthStateChanged);
 
 signoutButton.addEventListener("click", signOut);
-createLevel.addEventListener("click", addLevel1);
+level1.addEventListener("click", addLevel1);
 level2.addEventListener("click", function() {
     window.location = 'panic_level_2.html';
 });
+level3.addEventListener("click", addLevel3);
 
 // FUNCTIONS
 function signOut() {
@@ -38,9 +39,9 @@ function signOut() {
 
 function handleAuthStateChanged(user) {
     if (user) {
+        document.getElementById("uid").innerHTML = user.uid;
         // User is signed in
         displayName.innerHTML = user.displayName;
-        document.getElementById("uid").innerHTML = user.uid;
         writeUserData(user);
     }else{
         console.log("user signed out");
@@ -73,5 +74,21 @@ function addLevel1() {
             imgUrl: 'null'
         });
         alert("U zal door een meldkamer medewerker worden opgebeld en zo verder verhelpen worden.");
-    } 
+    }
+}
+
+function addLevel3() {
+    var uid = document.getElementById("uid").innerHTML;
+    var number = prompt("Vul uw telefoon nummer in:", "");
+    var address = prompt("Vul uw adres in:", "");
+
+    if (number != null || number != "") {
+        FIREBASE_DATABASE.ref('reports/' + uid).set({
+            number: number,
+            address: address,
+            level: '3',
+            imgUrl: 'null'
+        });
+        alert("Er zal een uitroep team van de dichtbijzijnste buurtwacht ingeschakeld worden en indien nodig ook de politie.");
+    }
 }
