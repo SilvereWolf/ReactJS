@@ -7,7 +7,6 @@ import Launcher from "./pages/Launcher.jsx"
 import firebase from "firebase";
 import Dashboard from "./clientside/Dashboard.jsx";
 import Landing from "./pages/Landing.jsx";
-import MKMLogIn from "./meldkamerpanel/MKMLogIn.jsx";
 
 
 class App extends Component {
