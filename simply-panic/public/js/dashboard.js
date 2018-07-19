@@ -67,6 +67,10 @@ function addLevel1() {
     var uid = document.getElementById("uid").innerHTML;
     var number = prompt("Vul uw telefoon nummer in zodat een medewerker contact met u kunt maken", "");
 
+    if(number == null || number == "") {
+        return false;
+    }
+
     if (number != null || number != "") {
         FIREBASE_DATABASE.ref('reports/' + uid).set({
             number: number,
@@ -82,7 +86,11 @@ function addLevel3() {
     var number = prompt("Vul uw telefoon nummer in:", "");
     var address = prompt("Vul uw adres in:", "");
 
-    if (number != null || number != "") {
+    if(number == null || number == "" || address == null || address == "") {
+        return false;
+    }
+
+    if (number != null || number != "" || address != null || address != "") {
         FIREBASE_DATABASE.ref('reports/' + uid).set({
             number: number,
             address: address,
