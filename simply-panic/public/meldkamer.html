@@ -4,6 +4,13 @@
   <meta charset="utf-8">
   <title>Simply Notify</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/my_css.css">
   
   <!-- Firebase SDK -->
   <script src="/__/firebase/5.2.0/firebase-app.js"></script>
@@ -38,29 +45,45 @@
                     </a>
                 </div>
                 <div class="button-wrapper">
-                    <button id="signout">Sign out</button>
+                    <button class="stype_top" id="signout">Sign out</button>
                 </div>
             </nav>
         </div>
     </header>
-
-    <div class="container">
-        <div class="wrapper">
-            <h5>Welcome back, <span id="display-name"></span></h5>
-        </div>
-
-        <div class="main-content">
-            <aside>
-                <ul>
-                    <li><a href="profile.html">Profile</a></li>
-                </ul>
-            </aside>
-            <div class="content">
-                
-            </div>
-        </div>
+    <div class="container" style="margin-top: 3em;">
+      <h3><b style="font-size: 26px">Meldkamer</b></h3>
+      <br>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Naam</th>
+                <th scope="col">Telefoon nummer</th>
+                <th scope="col">adress</th>
+                <th scope="col">Meld type</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Gino Bronstein</th>
+                <td>7234254</td>
+                <td>kapokhoutweg#10</td>
+                <td>Level1</td>
+              </tr>
+              <tr>
+                <th scope="row">Vliesse D.</th>
+                <td>7242994</td>
+                <td>Thorntonsteeg #10</td>
+                <td>Level2</td>
+              </tr>
+              <tr>
+                <th scope="row">Sarda S.</th>
+                <td>Larry</td>
+                <td>theBird laan #15</td>
+                <td>Level 3</td>
+              </tr>
+            </tbody>
+          </table>
     </div>
-
 
   <script src="/js/dashboard.js"></script>
 </body>

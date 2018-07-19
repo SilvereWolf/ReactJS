@@ -1,65 +1,118 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<head>
+  <meta charset="utf-8">
+  <title>Simply Notify</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/my_css.css">
+  
+  <!-- Firebase SDK -->
+  <script src="/__/firebase/5.2.0/firebase-app.js"></script>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/5.2.0/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/5.2.0/firebase-auth.js"></script>
-    <script defer src="/__/firebase/5.2.0/firebase-database.js"></script>
-    <script defer src="/__/firebase/5.2.0/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/5.2.0/firebase-storage.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
+    <!-- Add additional services that you want to use -->
+    <script src="/__/firebase/5.2.0/firebase-auth.js"></script>
+    <script src="/__/firebase/5.2.0/firebase-database.js"></script>
+    <script src="/__/firebase/5.2.0/firebase-messaging.js"></script>
+    <script src="/__/firebase/5.2.0/firebase-functions.js"></script>
+    
+    <!-- Comment out (or don't include) services that you don't want to use -->
+    <!-- <script src="/__/firebase/5.2.0/firebase-storage.js"></script> -->
+  
+    <script src="/__/firebase/init.js"></script>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+  <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+  
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/animate.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="modal-overlay animated fadeIn" hidden id="modal-overlay"></div> 
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo-wrapper">
+                    <a href="#">
+                        <span>PANIC</span>
+                    </a>
+                </div>
+                <ul>
+                    <li><a href="#">Create</a></li>
+                    <li><a href="#">Be Aware</a></li>
+                    <li><a href="#">Get Rescued</a></li>
+                </ul>
+                <div class="button-wrapper ">
+                    <button  class="stype_top" id="login" style="border-radius: 45px;">Log In</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="login-modal animated bounceIn" id="login-modal" hidden>
+        <button id="close-login-modal">Close</button>
+        <h1>Log In</h1>
+        <div id="firebaseui-auth-container"></div>
+        <div id="loader">Loading...</div>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+    <div class="container margin_top_em_4">
+      <div class="row" style="height: 450px; margin-bottom: 4em;">
+        <div class="col-md-6">
+          <img src="img/panic.png" class="overlay" style="height: 100%; border-radius: 10px; width: 100%; position: absolute; top: 0;left: 0;">
+          
+        </div>
+        <div class="col-md-6 margin_top_em_3">
+          <h3 style="font-size: 4rem; letter-spacing: -.06em;     line-height: 57px;">End Users</h3>
+          <p>Deze Applicatie is bestemd voor een ieder dat zich thuis veiliger wilt voelen en is toegankelijk op mobiel, smart Tv’s ,Laptops etc.</p>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+          <h3 style="font-size: 4rem; letter-spacing: -.06em;     line-height: 57px;">ABOUT</h3>
+          <p>Panic Button is een applicatie dat de gebruiker kunt gebruiken
+              in noodgevallen of wanneer gevaar dreigt zo dat die zich
+              veiliger kunt voelen</p>
 
-        try {
-          let app = firebase.app();
-          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+          <button type="button" class="btn btn-primary btn-lg stype_knop" style="border-radius: 40px">Hier aanmelden</button><br><br>
+        </div>
+      </div>
+      <div class="row bg_row1" style="height: 450px; margin-bottom: 4em;">
+        <div class="col-md-6" style="margin-top: 15%;">
+          <h3 style="font-size: 4rem; letter-spacing: -.06em; line-height: 57px;">Panic level 1</h3>
+          <p>Hier zult u door een meldkamer medewerker worden opgebeld en zal die u zo verder verhelpen.</p>
+        </div>
+        <div class="col-md-6">
+          <img class="schaduw" src="img/red-background-61.jpg" style="height: 100%; border-radius: 10px; width: 100%; position: absolute; top: 0;">
+          <img src="img/level1.jpg" style="margin-top: 2em; border-radius: 10px; width: 100%;transform: rotate(10deg);">
+        </div>
+      </div>
+
+
+        <div class="row" style="height: 450px; margin-bottom: 4em;">
+        <div class="col-md-6">
+          <img src="img/level2.jpg" style="height: 100%; border-radius: 10px; width: 100%;">
+        </div>
+        <div class="col-md-6 margin_top_em_3" style="margin-top: 15%;">
+          <h3 style="font-size: 4rem; letter-spacing: -.06em; line-height: 57px;">Panic Level 2</h3>
+          <p>Hier bestaat de mogelijkheid om een photo mee te sturen van een misdaad dat gepleegd wordt of plaats kan vinden hier wordt u ook op gebeld voor meerdere details.</p>
+        </div>
+      </div>
+      <div class="row bg_row1" style="height: 450px; margin-bottom: 4em;">
+        <div class="col-md-6" style="margin-top: 15%;" style="margin-top: 15%;">
+          <h3 style="font-size: 4rem; letter-spacing: -.06em; line-height: 57px;">Panic level 3</h3>
+          <p>Hier gaat het om extreme gevallen waar de u in gevaar loopt als u gebeld zou worden. Hier wordt er een uitroep team van de dichtbijzijnste buurtwacht ingeschakeld  en die de politie indien nodig</p>
+        </div>
+        <div class="col-md-6">
+          <img src="img/level3.png" style="height: 100%; border-radius: 10px; width: 100%;transform: rotate(10deg);">
+        </div>
+      </div>
+
+    </div>
+
+  <script src="/js/main.js"></script>
+</body>
 </html>

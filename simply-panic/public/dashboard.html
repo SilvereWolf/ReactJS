@@ -37,46 +37,31 @@
                         <span>PANIC</span>
                     </a>
                 </div>
-                <ul>
-                    <li><a href="#">Create</a></li>
-                    <li><a href="#">Be Aware</a></li>
-                    <li><a href="#">Get Rescued</a></li>
-                </ul>
                 <div class="button-wrapper">
-                    <button id="login">Log In</button>
+                    <button class="stype_top" id="signout">Sign out</button>
                 </div>
             </nav>
         </div>
     </header>
 
-    <div class="login-modal animated bounceIn" id="login-modal" hidden>
-        <button id="close-login-modal">Close</button>
-        <h1>Log In</h1>
-        <div id="firebaseui-auth-container"></div>
-        <div id="loader">Loading...</div>
+    <div class="container">
+        <div class="wrapper">
+            <h5>Welcome back, <span id="display-name"></span></h5>
+        </div>
+
+        <div class="main-content">
+            <aside>
+                <ul>
+                    <li><a href="profile.html">Profile</a></li>
+                </ul>
+            </aside>
+            <div class="content">
+                
+            </div>
+        </div>
     </div>
 
-    <div class="wrapper">
-    <main>
-      
-        
 
-      <form id="send-notification-form" hidden>
-        <label class="sr-only" for="notification-message">Notification Message</label>
-        <div>
-          <textarea id="notification-message" maxlength="40" placeholder="What would you like to say?"></textarea>
-          <button type="submit" id="send-notification" aria-label="Send">
-            <img src="/img/send.png" alt="">
-          </button>
-        </div>
-      </form>
-    </main>
-
-    <footer>
-      <small><a href="https://github.com/ireade/simply-notify">View Source</a></small>
-    </footer>
-  </div>
-
-  <script src="/js/main.js"></script>
+  <script src="/js/dashboard.js"></script>
 </body>
 </html>
