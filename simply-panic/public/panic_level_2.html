@@ -37,46 +37,38 @@
                         <span>PANIC</span>
                     </a>
                 </div>
-                <ul>
-                    <li><a href="#">Create</a></li>
-                    <li><a href="#">Be Aware</a></li>
-                    <li><a href="#">Get Rescued</a></li>
-                </ul>
                 <div class="button-wrapper">
-                    <button id="login">Log In</button>
+                    <button id="signout">Sign out</button>
                 </div>
             </nav>
         </div>
     </header>
 
-    <div class="login-modal animated bounceIn" id="login-modal" hidden>
-        <button id="close-login-modal">Close</button>
-        <h1>Log In</h1>
-        <div id="firebaseui-auth-container"></div>
-        <div id="loader">Loading...</div>
+    <div class="container">
+        <div class="wrapper">        
+            <div class="main-content">
+                <aside>
+                    <ul>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                    </ul>
+                </aside>
+                <div class="content">
+                    <div class="input-group">
+                        <h4>Foto van misdaad toevoegen:</h4>
+                    </div>
+                    <div class="id-image">
+                        <img src="img/user-id.png" id="id-img" alt="ID image">
+                        <input type="file" id="id-input" hidden>
+                    </div>
+                    <br>
+                    <button id="edit">Versturen</button>
+                    <button id="edit" hidden>Save</button>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="wrapper">
-    <main>
-      
-        
 
-      <form id="send-notification-form" hidden>
-        <label class="sr-only" for="notification-message">Notification Message</label>
-        <div>
-          <textarea id="notification-message" maxlength="40" placeholder="What would you like to say?"></textarea>
-          <button type="submit" id="send-notification" aria-label="Send">
-            <img src="/img/send.png" alt="">
-          </button>
-        </div>
-      </form>
-    </main>
-
-    <footer>
-      <small><a href="https://github.com/ireade/simply-notify">View Source</a></small>
-    </footer>
-  </div>
-
-  <script src="/js/main.js"></script>
+  <script src="/js/level2.js"></script>
 </body>
 </html>
