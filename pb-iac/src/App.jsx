@@ -7,7 +7,6 @@ import Launcher from "./pages/Launcher.jsx"
 import firebase from "firebase";
 import Dashboard from "./clientside/Dashboard.jsx";
 import Landing from "./pages/Landing.jsx";
-import MKMLogIn from "./meldkamerpanel/MKMLogIn.jsx";
 
 
 class App extends Component {
@@ -52,14 +51,8 @@ class App extends Component {
           <Route path="/Contact" component={Contact} />
           <Route path="/Login" component={Login}/>
           <Route path="/Launcher" component={Launcher}/>
-<<<<<<< HEAD
           <Route path="/Landing" component={Landing}/>
           <Route path="/Dashboard" component={Dashboard}/>
-=======
-          <Route path="/MKMLogIn" component={MKMLogIn}/>
-          
->>>>>>> 979d7a152b4629ab1a067c13796038c99467d791
-          
         </div>
       </Router>
     );

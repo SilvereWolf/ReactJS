@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import firebase from "firebase"
 import Footer from '../components/Footer';
-import Card from '../components/Card';
+import Panic from '../components/Panic';
 import Navbar from '../components/AuthNavbar'
 
 
@@ -45,11 +45,13 @@ class Dashboard extends Component {
         return (
             <div>
             <Navbar />
+            <div className="Container-Fluid">
             <span>
             <h1>Welcome {firebase.auth().currentUser.displayName}</h1>
             </span>
-            <Card />
+            <Panic />
             <Footer/>
+            </div>
             </div>
         );
     }
