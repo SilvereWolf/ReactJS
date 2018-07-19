@@ -2,14 +2,13 @@ import React, { Component } from 'react'
 import './Landing.css';
 import icons from 'glyphicons';
 
-
-
 class landing extends Component {
   
     render () {
+      console.info('I' + icons.heart + ' Glyphicons!')
         return (
             <div>
-          {/* Navigation */}
+          {/* Navigation */}    
           <nav className="navbar navbar-light bg-light static-top">
             <div className="container">
               <a className="navbar-brand" href="/Landing">PanicButton</a>
@@ -22,17 +21,12 @@ class landing extends Component {
             <div className="container">
               <div className="row">
                 <div className="col-xl-9 mx-auto">
-                  <h1 className="mb-5">Build a landing page for your business or project and generate more leads!</h1>
+                  <h1 className="mb-5">Beveilig u zelfs met de Panic Button</h1>
                 </div>
                 <div className="col-md-10 col-lg-8 col-xl-7 mx-auto">
                   <form>
                     <div className="form-row">
-                      <div className="col-12 col-md-9 mb-2 mb-md-0">
-                        <input type="email" className="form-control form-control-lg" placeholder="Enter your email..." />
-                      </div>
-                      <div className="col-12 col-md-3">
-                        <button type="submit" className="btn btn-block btn-lg btn-primary">Sign up!</button>
-                      </div>
+                      
                     </div>
                   </form>
                 </div>
@@ -106,21 +100,21 @@ class landing extends Component {
               <div className="row">
                 <div className="col-lg-4">
                   <div className="testimonial-item mx-auto mb-5 mb-lg-0">
-                    <img className="img-fluid rounded-circle mb-3" src="img/testimonials-1.jpg" alt />
+                    <img className="img-fluid rounded-circle mb-3" src="./Images/testimonials-1.jpg" alt="" />
                     <h5>Margaret E.</h5>
                     <p className="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
                   </div>
                 </div>
                 <div className="col-lg-4">
                   <div className="testimonial-item mx-auto mb-5 mb-lg-0">
-                    <img className="img-fluid rounded-circle mb-3" src="img/testimonials-2.jpg" alt />
+                    <img className="img-fluid rounded-circle mb-3" src="img/testimonials-2.jpg" alt="" />
                     <h5>Fred S.</h5>
                     <p className="font-weight-light mb-0">"Bootstrap is amazing. I've been using it to create lots of super nice landing pages."</p>
                   </div>
                 </div>
                 <div className="col-lg-4">
                   <div className="testimonial-item mx-auto mb-5 mb-lg-0">
-                    <img className="img-fluid rounded-circle mb-3" src="img/testimonials-3.jpg" alt />
+                    <img className="img-fluid rounded-circle mb-3" src="img/testimonials-3.jpg" alt="" />
                     <h5>Sarah	W.</h5>
                     <p className="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p>
                   </div>
@@ -158,19 +152,11 @@ class landing extends Component {
                 <div className="col-lg-6 h-100 text-center text-lg-left my-auto">
                   <ul className="list-inline mb-2">
                     <li className="list-inline-item">
-                      <a href="#">About</a>
+                      <a href="/About">About</a>
                     </li>
                     <li className="list-inline-item">⋅</li>
                     <li className="list-inline-item">
-                      <a href="#">Contact</a>
-                    </li>
-                    <li className="list-inline-item">⋅</li>
-                    <li className="list-inline-item">
-                      <a href="#">Terms of Use</a>
-                    </li>
-                    <li className="list-inline-item">⋅</li>
-                    <li className="list-inline-item">
-                      <a href="#">Privacy Policy</a>
+                      <a href="/Contact">Contact</a>
                     </li>
                   </ul>
                   <p className="text-muted small mb-4 mb-lg-0">© Your Website 2018. All Rights Reserved.</p>
@@ -183,12 +169,12 @@ class landing extends Component {
                       </a>
                     </li>
                     <li className="list-inline-item mr-3">
-                      <a href="#">
+                      <a href="">
                         <i className="fa fa-twitter fa-2x fa-fw" />
                       </a>
                     </li>
                     <li className="list-inline-item">
-                      <a href="#">
+                      <a href="">
                         <i className="fa fa-instagram fa-2x fa-fw" />
                       </a>
                     </li>

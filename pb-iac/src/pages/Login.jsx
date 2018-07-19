@@ -14,7 +14,7 @@ export default class Login extends React.Component {
 
   state = {isSignedIn: false}
   uiConfig = {
-    signInFlow: "popup",
+    signInFlow: "redirect",
     signInOptions: [
       firebase.auth.GoogleAuthProvider.PROVIDER_ID,
       firebase.auth.PhoneAuthProvider.PROVIDER_ID,
