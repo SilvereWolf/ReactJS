@@ -28,15 +28,15 @@ var uiConfig = {
     },
     // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
     signInFlow: 'popup',
-    signInSuccessUrl: '<url-to-redirect-to-on-success>',
+    signInSuccessUrl: 'dashboard.html',
     signInOptions: [
       // Leave the lines as is for the providers you want to offer your users.
-      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-      firebase.auth.FacebookAuthProvider.PROVIDER_ID,
       firebase.auth.EmailAuthProvider.PROVIDER_ID,
+      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+      firebase.auth.PhoneAuthProvider.PROVIDER_ID,
     ],
     // Terms of service url.
-    tosUrl: '<your-tos-url>'
+    tosUrl: 'terms.html'
 };
 
 ui.start('#firebaseui-auth-container', uiConfig);
@@ -64,25 +64,13 @@ function hideLoginModal(){
     
 }
 
-
-function signIn() {
-    FIREBASE_AUTH.signInWithPopup(new firebase.auth.GoogleAuthProvider());
-}
-  
-function signOut() {
-    FIREBASE_AUTH.signOut();
-}
-
 function handleAuthStateChanged(user) {
     if (user) {
-      // User is signed in
-      console.log(user);
-      signInButton.setAttribute("hidden", "true");
-      signOutButton.removeAttribute("hidden");
+        // User is signed in
+        console.log(user);
+        window.location.href = 'dashboard.html';
     } else {
-      // User is not signed in
-      console.log("user is not signed in");
-      signOutButton.setAttribute("hidden", "true");
-      signInButton.removeAttribute("hidden");
+        // User is not signed in
+        console.log("user is not signed in");
     }
-  }
+}

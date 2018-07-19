@@ -1,7 +1,7 @@
 /* Variables ======================== */
 
 :root {
-    --bg-color: rgb(229, 236, 240);
+    --bg-color: rgb(255, 255, 255);
     --theme-color: rgb(0, 162, 249);
     --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     --font-size: 1.6rem;
@@ -44,6 +44,16 @@ body{
 }
 button{
     cursor: pointer;
+    width: auto;
+    border-radius: 3px;
+    background-color: var(--theme-color); 
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 25px;
+}
+img{
+    width: 100%;
 }
 .container{
     position: relative;
@@ -140,4 +150,66 @@ button#close-login-modal{
 .login-modal h1{
     text-align: center;
     margin: 1em 0;
+}
+.wrapper{
+    padding: 2em 0;
+}
+#display-name{
+    font-weight: bold;
+}
+.main-content{
+    display: flex;
+}
+.main-content aside{
+    width: 10%;
+    margin-right: 10%;
+}
+.main-content aside ul{
+    border-radius: 3px;
+    border: 1px solid #d4d4d4;;
+    background-color: #fff;
+    padding: 10px 0;
+}
+.main-content aside ul li:not(:last-child){
+    border-bottom: 1px solid #eeeeee;
+}
+.main-content aside ul li a{
+    text-decoration: none;
+    padding: 1em;
+}
+.main-content .content{
+    width: 50%;
+}
+.profile-image{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;   
+    background-color: #eeeeee;
+    overflow: hidden;
+}
+.profile-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.input-group{
+    padding: 1em 0;
+    margin: 5px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+.input-group h4{
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+input{
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    background-color: #fff;
+    padding: 10px 20px;
+}
+img#id-img{
+    height: 100px;
+    width: auto;
 }
